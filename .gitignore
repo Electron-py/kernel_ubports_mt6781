@@ -1,0 +1,21 @@
+# Build outputs
+out/
+*.o
+*.ko
+*.order
+*.mod
+*.mod.c
+*.symversions
+*.cmd
+.config
+.tmp*
+Module.symvers
+
+# Android build artefacts
+*.apk
+*.jar
+
+# Misc
+*.swp
+*~
+.DS_Store
