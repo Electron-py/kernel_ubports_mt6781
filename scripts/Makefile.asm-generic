@@ -10,9 +10,11 @@ PHONY := all
 all:
 
 kbuild-file := $(srctree)/arch/$(SRCARCH)/include/$(src)/Kbuild
+$(info DEBUG1 srctree=[$(srctree)] SRCARCH=[$(SRCARCH)] src=[$(src)] kbuild-file=[$(kbuild-file)] found=[$(wildcard $(kbuild-file))])
 -include $(kbuild-file)
 
 include $(srctree)/scripts/Kbuild.include
+$(info DEBUG2 after-includes generic-y=[$(generic-y)])
 
 # Create output directory if not already present
 _dummy := $(shell [ -d $(obj) ] || mkdir -p $(obj))
